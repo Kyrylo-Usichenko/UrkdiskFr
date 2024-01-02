@@ -7,7 +7,7 @@
 <Header ifMain={false}/>
 <div class="page">
     <div class="errContent">
-        <p class="errMessage">Извините, что-то пошло не так. Попробуйте позже.</p>
+        <p class="errMessage">Извините, что-то пошло не так. Попробуйте позже.1</p>
     </div>
 </div>
 <Footer/>

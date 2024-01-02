@@ -26,7 +26,7 @@
 	let loaded = false;
 
 	export let data;
-	const { brands, popularRims } = data;
+	// const { brands, popularRims } = data;
 
 	let userInput = '';
 	let inputValue = '';
@@ -141,13 +141,13 @@
 				alt="carSelect"
 			/>
 		</div>
-		<CarSelector
+		<!-- <CarSelector
 			withHeader={true}
 			{brands}
 			rimBrand="all"
 			byCar={false}
 			allBrands={false}
-		/>
+		/> -->
 	</div>
 </section>
 <section class="rimMakers">
@@ -253,7 +253,7 @@
 		</div>
 	{:else}
 		<div style="margin-top: 2px;">
-			<RimContent rimData={popularRims} />
+			<!-- <RimContent rimData={popularRims} /> -->
 		</div>
 		<a
 			href="/rims?selectedDiameters=all"

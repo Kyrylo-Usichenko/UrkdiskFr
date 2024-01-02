@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { error } from "@sveltejs/kit";
-	import { tick } from "svelte";
-
+	
     export let showAskQuest: boolean
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -68,27 +67,27 @@
         }
     }
 
-    $: {
-            if (typeof document !== 'undefined') {
-                tick().then(() => {
-                    if(window.innerWidth > 1024 ){
-                        document.body.style.overflow = showAskQuest ? 'hidden' : "auto";
-                        document.body.style.margin = showAskQuest ? '0 17px 0 0' : "0";
-                    } else {
-                        document.body.style.overflow = showAskQuest ? 'hidden' : "auto";
-                    }
-                });
-            }
-            if (phoneNumber.length >= 9) {
-                showPhoneError = false
-            }
-            if (question.length > 5) {
-                questionError = false
-            }
-            if (email.length === 0 || emailRegex.test(email)) {
-                emailError = false
-            }
-        }
+    // $: {
+    //         if (typeof document !== 'undefined') {
+    //             tick().then(() => {
+    //                 if(window.innerWidth > 1024 ){
+    //                     document.body.style.overflow = showAskQuest ? 'hidden' : "auto";
+    //                     document.body.style.margin = showAskQuest ? '0 17px 0 0' : "0";
+    //                 } else {
+    //                     document.body.style.overflow = showAskQuest ? 'hidden' : "auto";
+    //                 }
+    //             });
+    //         }
+    //         if (phoneNumber.length >= 9) {
+    //             showPhoneError = false
+    //         }
+    //         if (question.length > 5) {
+    //             questionError = false
+    //         }
+    //         if (email.length === 0 || emailRegex.test(email)) {
+    //             emailError = false
+    //         }
+    //     }
 </script>
 
 

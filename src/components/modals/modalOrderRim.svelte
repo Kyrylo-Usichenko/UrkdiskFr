@@ -71,24 +71,24 @@
         }
     }
 
-    $: {
-            if (typeof document !== 'undefined') {
-                tick().then(() => {
-                    if(window.innerWidth > 1024 ){     
-                        document.body.style.overflow = showOrderField ? 'hidden' : "auto";
-                        document.body.style.margin = showOrderField ? '0 17px 0 0' : "0";
-                    } else {
-                        document.body.style.overflow = showOrderField ? 'hidden' : "auto";
-                    } 
-                });
-            }
-            if (phoneNumber.length >= 9) {
-                showPhoneError = false
-            }
-            if (emailRegex.test(email)) {
-                emailError = false
-            }
-        }
+    // $: {
+    //         if (typeof document !== 'undefined') {
+    //             tick().then(() => {
+    //                 if(window.innerWidth > 1024 ){     
+    //                     document.body.style.overflow = showOrderField ? 'hidden' : "auto";
+    //                     document.body.style.margin = showOrderField ? '0 17px 0 0' : "0";
+    //                 } else {
+    //                     document.body.style.overflow = showOrderField ? 'hidden' : "auto";
+    //                 } 
+    //             });
+    //         }
+    //         if (phoneNumber.length >= 9) {
+    //             showPhoneError = false
+    //         }
+    //         if (emailRegex.test(email)) {
+    //             emailError = false
+    //         }
+    //     }
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events --><!-- svelte-ignore a11y-no-static-element-interactions -->
